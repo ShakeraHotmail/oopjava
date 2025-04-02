@@ -1,0 +1,41 @@
+// Lớp Car kế thừa từ Vehicle
+class Car extends Vehicle {
+    private int doors;
+
+    public Car(String brand, int year, int doors) {
+        super(brand, year);
+        this.doors = doors;
+    }
+
+    @Override
+    public void startEngine() {
+        System.out.println("Car engine started: Vroom Vroom!");
+    }
+
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Doors: " + doors);
+    }
+}
+
+// Lớp Motorcycle kế thừa từ Vehicle
+class Motorcycle extends Vehicle {
+    private boolean hasSidecar;
+
+    public Motorcycle(String brand, int year, boolean hasSidecar) {
+        super(brand, year);
+        this.hasSidecar = hasSidecar;
+    }
+
+    @Override
+    public void startEngine() {
+        System.out.println("Motorcycle engine started: Braaap!");
+    }
+
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Has Sidecar: " + (hasSidecar ? "Yes" : "No"));
+    }
+}
