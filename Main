@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        Vehicle myCar = new Car("Toyota", 2022, 4);
+        Vehicle myMotorcycle = new Motorcycle("Honda", 2021, false);
+
+        myCar.startEngine();       // Output: Car engine started: Vroom Vroom!
+        myCar.displayInfo();       // Output: Brand: Toyota, Year: 2022, Doors: 4
+
+        System.out.println("----------------------");
+
+        myMotorcycle.startEngine(); // Output: Motorcycle engine started: Braaap!
+        myMotorcycle.displayInfo(); // Output: Brand: Honda, Year: 2021, Has Sidecar: No
+    }
+}
